@@ -50,7 +50,7 @@ body {
   align-self: center;
   margin-right: -20px;
   width: min-content;
-text-transform: lowercase;
+  /*text-transform: lowercase;*/
 }
 
 .name{
