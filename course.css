@@ -1,0 +1,131 @@
+@font-face {
+	src: url("fonts/HeiermannRundgangFinkenau-Regular.woff2");
+	font-family: "FontOne";
+}
+
+
+body {
+	font-family: "FontOne", sans-serif;
+	font-synthesis: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0mm;
+	margin: 0;
+	font-kerning: auto;
+	font-size: 600px;
+	/*letter-spacing: .0125rem !important;*/
+	hyphens: auto;
+}
+
+.page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	gap: 0mm;
+	margin: 0;
+	width: 297mm;
+	height: 420mm;
+}
+
+.card {
+	height: 200mm;
+	width: 300mm;
+	border: 1px solid red;
+	display: flex;
+	padding: 4mm;
+	container-name: size;
+	gap: 3mm; 
+	line-height: 0.9;
+	align-content: flex-end;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: left;
+	font-size: 700px;
+}
+
+.course {
+	font-size:  96px;
+	flex-shrink: 2;
+	hyphens: auto;
+	/*	max-width: 75%;*/
+/*	transform: scale(-1, -1);*/
+	letter-spacing: -.5px;
+	line-height: 72px;
+	margin-bottom: -.05em;
+	padding-top: .05em;
+	hyphens: none;
+	text-wrap: balance;
+	/*font-feature-settings: "ss03";*/
+}
+
+.course-text{
+	font-size:  36px;
+	line-height: 36px;
+	/*column-count: 2;*/
+	/*text-indent: -20px;*/
+	/*padding-left: 20px;*/
+}
+
+
+.course-text::before{
+	content: "Kursbeschreibung";
+	display: block;
+	column-count: 1;
+	/*transform: scale(-1, -1);*/
+	margin-bottom: .125em;
+}
+
+.course-text::empty{
+	display: none;
+}
+
+.name{
+	font-size:  20px;
+	flex-shrink: 2;
+	line-height: 18px;
+	letter-spacing: .05rem;
+	hyphens: none;
+	/*	max-width: 75%;*/
+	/*	writing-mode: vertical-lr;*/
+/*	transform: scale(-1, -1);*/
+	/*	text-orientation: mixed;*/
+}
+.name::before{
+	content: "Teilnehmende";
+	display: block;
+	/*transform: scale(-1, -1);*/
+	margin-top: -0px;
+	/*margin-bottom: 1rem;*/
+}
+
+
+.supervision {
+	font-size:  max(0.1em, 20px);
+	flex-shrink: 2;
+	/*	max-width: 75%;*/
+	/*	writing-mode: vertical-rl;*/
+/*	transform: scale(-1, -1);*/
+	text-orientation: mixed;
+	letter-spacing: .08rem;
+}
+
+.supervision::before{
+	content: "betreut von ";
+	display: block;
+	/*transform: scale(-1, -1);*/
+	margin-top: -2px;
+
+}
+
+@media print {
+	@page {
+		size: 297mm 420mm;
+		margin: 0;
+	}  
+	.page {
+/*		margin: 10mm;*/
+	}
+}

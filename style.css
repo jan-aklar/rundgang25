@@ -1,0 +1,112 @@
+@font-face {
+	src: url("fonts/HeiermannRundgangFinkenau-Regular.woff2");
+	font-family: "Heiermann";
+}
+body {
+	font-family: "Heiermann", sans-serif;
+	font-synthesis: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0mm;
+	margin: 0;
+	font-size: 36pt;
+	/*text-transform: lowercase;*/
+}
+
+.page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0mm;
+	margin: 0;
+}
+
+.card {
+	height: 80mm;
+	width: 126mm;
+	border: 1px solid red;
+	display: flex;
+	padding: 4mm;
+	container-name: size;
+	gap: 3mm; 
+	line-height: 1rem;
+	align-content: flex-end;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: left;
+	text-wrap: balance;
+	/*word-spacing: -7px;*/
+	/*letter-spacing: -3px !important;*/
+	/*flex-wrap: wrap;*/
+
+}
+
+.title {
+	line-height: .75em;
+  max-height: 80mm;
+  font-size: 1em;
+  text-align: left;
+  align-self: center;
+  margin-right: -20px;
+  width: min-content;
+text-transform: lowercase;
+}
+
+.name{
+	font-size: 0.5em;
+  float: right;
+  line-height: 10em;
+  margin-top: -90px;
+}
+
+/*.name::before{
+	content: "von ";
+	display: block;
+	margin-top: -4px;
+	/*transform: scale(-1, -1);}*/
+
+
+.course {
+	font-size: 0.5em;
+  flex-shrink: 2;
+  hyphens: auto;
+  max-width: 75%;
+  align-self: center;
+  line-height: 1em;
+  margin-left: -50px;
+}
+.course::before{
+	content: "im Kurs";
+	display: block;
+	/*transform: scale(-1, -1);*/
+	margin-top: -4px;
+}
+
+.supervision {
+	font-size:  max(0.15em, 16px);
+	flex-shrink: 2;
+	/*	max-width: 75%;*/
+	/*	writing-mode: vertical-rl;*/
+	text-orientation: mixed;
+	letter-spacing: .08rem;
+	display: none;
+}
+
+.supervision::before{
+	content: "betreut von ";
+	display: block;
+	/*transform: scale(-1, -1);*/
+	margin-top: -2px;
+
+}
+
+@media print {
+	@page {
+		size: 297mm 420mm;
+		margin: 0;
+	}  
+	.page {
+		margin: 10mm;
+	}
+}
