@@ -44,40 +44,43 @@ body {
 
 .title {
 	line-height: .75em;
-  max-height: 80mm;
-  font-size: 1em;
-  text-align: left;
-  align-self: center;
-  margin-right: -20px;
-  width: min-content;
-  /*text-transform: lowercase;*/
+	max-height: 80mm;
+	font-size: 1em;
+	text-align: left;
+	align-self: center;
+	margin-right: -20px;
+	width: max-content;
+	font-feature-settings: "ss03" 1;
+	max-width: 60%;
 }
 
 .name{
 	font-size: 0.5em;
-  float: right;
-  line-height: 10em;
-  margin-top: -90px;
+	float: right;
+	line-height: 10em;
+	margin-top: -90px;
 }
 
 /*.name::before{
-	content: "von ";
-	display: block;
-	margin-top: -4px;
-	/*transform: scale(-1, -1);}*/
+content: "von ";
+display: block;
+margin-top: -4px;
+/*transform: scale(-1, -1);}*/
 
 
 .course {
-	font-size: 0.5em;
-  flex-shrink: 2;
-  hyphens: auto;
-  max-width: 75%;
-  align-self: center;
-  line-height: 1em;
-  margin-left: -50px;
+	font-size: 20px;
+	flex-shrink: 2;
+	hyphens: none;
+	max-width: 75%;
+	align-self: center;
+	line-height: 1em;
+	margin-left: -50px;
+	line-height: 16px;
+	font-feature-settings: "ss02" 1;
 }
 .course::before{
-	content: "im Kurs";
+	/*	content: "im Kurs";*/
 	display: block;
 	/*transform: scale(-1, -1);*/
 	margin-top: -4px;
@@ -103,10 +106,10 @@ body {
 
 @media print {
 	@page {
-		size: 297mm 420mm;
+		size: 420mm  297mm;
 		margin: 0;
 	}  
 	.page {
-		margin: 10mm;
+		margin: 5mm;
 	}
 }
