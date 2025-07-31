@@ -1,4 +1,4 @@
-f=open('/Users/simonthiefes/Desktop/rooms.csv', encoding='UTF-8')
+f=open('data/rooms/rooms.csv', encoding='UTF-8')
 contents = f.read()
 
 i = 0
